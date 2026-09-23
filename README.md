@@ -1,0 +1,2 @@
+# Edify
+Campus Management System
