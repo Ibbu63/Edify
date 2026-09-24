@@ -78,5 +78,11 @@ public class Student{
         //static method belonging to the class rather than an instance of the class
         
     }
-    
+    //abstract method to be implemented by subclasses
+    public abstract void studentType();
+
+    //static method belonging to the class rather than an object of the class
+    public static void displayStudentCount() {  
+        System.out.println("Total number of students: " + StudentCount);
+    }
 }
