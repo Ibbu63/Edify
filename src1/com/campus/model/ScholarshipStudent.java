@@ -14,4 +14,22 @@ public class ScholarshipStudent extends Student {
         return scholarshipPercentage;
 
     }
+    public void setScholarshipPercentage(double scholarshipPercentage) {
+        this.scholarshipPercentage = scholarshipPercentage;
+    }
+
+    //override
+    @Override
+    public void studentType() {
+        System.out.println("Scholarship Student");
+    }
+    @Override
+    public void displayStudentInfo(boolean showMarks) {
+        super.displayStudentInfo(showMarks);
+    }
+    @Override
+    public void eligibleForScholarship() {
+        System.out.println("Eligible for Scholarship");
+    }
+
 }

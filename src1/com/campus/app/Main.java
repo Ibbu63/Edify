@@ -14,7 +14,8 @@ public class Main{
         System.out.println("Enter the Student Age:");
         int age=sc.nextInt();
         System.out.println("Enter the Student department:");
-        String department=sc.next();
+        String department=sc.next
+        ();
         System.out.println("Number of subjects:");
         int n=sc.nextInt();
         int[] marks=new int[n];

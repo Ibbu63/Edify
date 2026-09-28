@@ -1,5 +1,8 @@
 package com.campus.model;
-public class Student{
+
+import com.campus.contract.StudentOperations;
+
+public class Student implements StudentOperations {
     //encapsulation
     private  int studentId;
     private String studentName;
@@ -79,7 +82,7 @@ public class Student{
         
     }
     //abstract method to be implemented by subclasses
-    public abstract void studentType();
+    public abstract void studentType();b
 
     //static method belonging to the class rather than an object of the class
     public static void displayStudentCount() {  
