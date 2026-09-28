@@ -66,26 +66,37 @@ public class Student implements StudentOperations {
         this.marks = marks;
     }
 
-    //methods
+    // methods
     public void displayStudentInfo() {
         System.out.println("Student ID: " + studentId);
         System.out.println("Student Name: " + studentName);
         System.out.println("Age: " + Age);
         System.out.println("Department: " + department);
     }
+
     public void displayStudentInfo(boolean showMarks) {
         displayStudentInfo();
         if (showMarks) {
-            System.out.print("Marks: "+ java.util.Arrays.toString(marks));
+            if (marks != null) {
+                System.out.println("Marks: " + java.util.Arrays.toString(marks));
+            } else {
+                System.out.println("Marks: []");
+            }
         }
-        //static method belonging to the class rather than an instance of the class
-        
     }
-    //abstract method to be implemented by subclasses
-    public abstract void studentType();b
 
-    //static method belonging to the class rather than an object of the class
-    public static void displayStudentCount() {  
+    @Override
+    public void studentType() {
+        System.out.println("Regular Student");
+    }
+
+    @Override
+    public void eligibleForScholarship() {
+        System.out.println("Not eligible for scholarship");
+    }
+
+    // static method belonging to the class rather than an object of the class
+    public static void displayStudentCount() {
         System.out.println("Total number of students: " + StudentCount);
     }
 }
