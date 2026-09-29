@@ -1,27 +1,33 @@
 package com.campus.controller;
 
+import java.io.IOException;
+
 import com.campus.services.StudentService;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
 
-@WebServlet("/student")
+@WebServlet("/students")
 public class StudentServlet extends HttpServlet {
     private final StudentService studentService = new StudentService();
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html;charset=UTF-8");
-
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h2>Student List</h2>");
-        for (String student : studentService.getStudents()) {
-            out.println("<p>" + student + "</p>");
-        }
-        out.println("</body></html>");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException,ServletException {
+        var students = studentService.getStudents();
+        request.setAttribute("students", students);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/students.jsp");
+        dispatcher.forward(request, response);
+        
+    }
+    @Override
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String name = request.getParameter("name");
+        String course = request.getParameter("course");
+        studentService.addStudent(name, course);
+        response.sendRedirect("/students");
     }
 }
