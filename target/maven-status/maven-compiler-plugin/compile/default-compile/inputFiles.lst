@@ -1,8 +1,12 @@
 /home/cc2-61/Downloads/ibbuRepo/Edify/src/main/java/com/campus/controller/StudentServlet.java
+/home/cc2-61/Downloads/ibbuRepo/Edify/src/main/java/com/campus/dao/StudentJPADAO.java
 /home/cc2-61/Downloads/ibbuRepo/Edify/src/main/java/com/campus/listener/CampusSession.java
 /home/cc2-61/Downloads/ibbuRepo/Edify/src/main/java/com/campus/filter/LoggingFilter.java
+/home/cc2-61/Downloads/ibbuRepo/Edify/src/main/java/com/campus/dao/DepartmentJPADAO.java
 /home/cc2-61/Downloads/ibbuRepo/Edify/src/main/java/com/campus/model/Student.java
 /home/cc2-61/Downloads/ibbuRepo/Edify/src/main/java/com/campus/controller/SessionServlet.java
+/home/cc2-61/Downloads/ibbuRepo/Edify/src/main/java/com/campus/model/Department.java
+/home/cc2-61/Downloads/ibbuRepo/Edify/src/main/java/com/campus/util/JPAUtil.java
 /home/cc2-61/Downloads/ibbuRepo/Edify/src/main/java/com/campus/dao/StudentDAO.java
 /home/cc2-61/Downloads/ibbuRepo/Edify/src/main/java/com/campus/services/StudentService.java
 /home/cc2-61/Downloads/ibbuRepo/Edify/src/main/java/com/campus/util/DBConnection.java
